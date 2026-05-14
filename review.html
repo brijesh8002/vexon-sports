@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customers Review | Vexon Sports</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <main>
+        <!-- HEADER -->
+        <header id="header"></header>
+
+
+
+
+
+
+
+        <!-- Customers Review and Feedback section -->
+        <section class="container ae-review-section py-4">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold mb-0">Customer Reviews</h4>
+                <button class="ae-review-btn" onclick="aeReviewOpen()">Write Review</button>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="row g-4">
+
+                <!-- Review Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="ae-review-card">
+
+                        <div class="d-flex align-items-center mb-2">
+                            <img alt="image"  src="assets/media/user.webp" class="ae-review-user">
+                            <div class="ms-2">
+                                <div class="fw-semibold">Shiva </div>
+                                <div class="ae-review-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p class="ae-review-text">
+                            Amazing experience! Taj Mahal tour was well organized and guide was very informative.
+                        </p>
+
+                        <div class="ae-review-gallery">
+                            <img alt="image"  src="assets/media/hero1.webp">
+                            <img alt="image"  src="assets/media/card3.webp">
+                            <img alt="image"  src="assets/media/hero2.webp">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Review Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="ae-review-card">
+
+                        <div class="d-flex align-items-center mb-2">
+                            <img alt="image"  src="assets/media/user.webp" class="ae-review-user">
+                            <div class="ms-2">
+                                <div class="fw-semibold">Shiva </div>
+                                <div class="ae-review-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p class="ae-review-text">
+                            Amazing experience! Taj Mahal tour was well organized and guide was very informative.
+                        </p>
+
+                        <div class="ae-review-gallery">
+                            <img alt="image"  src="assets/media/card3.webp">
+                            <img alt="image"  src="assets/media/card1.webp">
+                            <img alt="image"  src="assets/media/card2.webp">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Review Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="ae-review-card">
+
+                        <div class="d-flex align-items-center mb-2">
+                            <img alt="image"  src="assets/media/user.webp" class="ae-review-user">
+                            <div class="ms-2">
+                                <div class="fw-semibold">Shiva </div>
+                                <div class="ae-review-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <p class="ae-review-text">
+                            Amazing experience! Taj Mahal tour was well organized and guide was very informative.
+                        </p>
+
+                        <div class="ae-review-gallery">
+                            <img alt="image"  src="assets/media/card6.webp">
+                            <img alt="image"  src="assets/media/card5.webp">
+                            <img alt="image"  src="assets/media/card4.webp">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Copy more cards if needed -->
+
+            </div>
+
+        </section>
+
+
+        <!-- REVIEW MODAL -->
+        <div class="ae-review-modal" id="aeReviewModal">
+            <div class="ae-review-modal-box">
+
+                <div class="d-flex justify-content-between mb-3">
+                    <h5>Write a Review</h5>
+                    <span class="ae-review-close" onclick="aeReviewClose()">✕</span>
+                </div>
+
+                <!-- <input type="text" class="ae-review-input" placeholder="Your Name"> -->
+
+                <!-- Stars -->
+                <div class="ae-review-star-input mt-2 mx-auto">
+                    <span data-val="1">★</span>
+                    <span data-val="2">★</span>
+                    <span data-val="3">★</span>
+                    <span data-val="4">★</span>
+                    <span data-val="5">★</span>
+                </div>
+
+                <textarea class="ae-review-textarea mt-2" placeholder="Write your feedback..."></textarea>
+
+                <!-- Upload -->
+                <input type="file" multiple class="ae-review-file mt-2">
+
+                <div class="ae-review-preview mt-2"></div>
+
+                <button class="ae-review-submit mt-3" onclick="aeReviewSubmit()">Submit Review</button>
+
+            </div>
+        </div>
+
+        <!-- Customers Review and Feedback section -->
+
+        
+
+
+
+
+
+        <!-- Footer Start -->
+        <footer class="footer" id="footer"></footer>
+
+        <!-- Footer End -->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
