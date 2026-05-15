@@ -1,106 +1,1907 @@
-<!-- BOOTSTRAP ICON -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-/>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vexon Sports – Plastic Cricket Stumps Set</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <style>
-  .vxm-bottom-navbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border-top: 1px solid #dcdcdc;
-    z-index: 9999;
-    padding: 10px 0;
-  }
 
-  .vxm-bottom-navbar .vxm-nav-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+/* ===========================
+   ROOT & RESET
+=========================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  .vxm-bottom-navbar .vxm-nav-link {
-    width: 20%;
-    text-align: center;
-    text-decoration: none;
-    color: #222;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-  }
 
-  .vxm-bottom-navbar .vxm-nav-link i {
-    font-size: 29px;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
+:root {
+  --main-color: #FB111A;
+  --primary-color: #000000;
+  --secondary-color: #FCFCFC;
+  --tertiary-color: #bcbaba;
+  --gold:  #c9972c;
+}
 
-  .vxm-bottom-navbar .vxm-nav-link span {
-    font-size: 16px;
-    font-weight: 400;
-  }
+:root {
 
-  .vxm-bottom-navbar .vxm-nav-link.active {
-    color: #1296f3;
-  }
+  
 
-  @media (min-width: 992px) {
-    .vxm-bottom-navbar {
-      display: none;
-    }
-  }
+  --mid:   #1c1c1c;
+  --panel: #181818;
+  --border:#2e2e2e;
+  --text:  #000;
+  --white: #000;
+  --accent:#ff4b2b;
+  --green: #29d97a;
+  --radius:14px;
+  --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+}
 
-  @media (max-width: 576px) {
-    .vxm-bottom-navbar {
-      padding: 8px 0;
-    }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--secondary-color);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-    .vxm-bottom-navbar .vxm-nav-link i {
-      font-size: 26px;
-      margin-bottom: 6px;
-    }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
 
-    .vxm-bottom-navbar .vxm-nav-link span {
-      font-size: 14px;
-    }
-  }
+/* ===========================
+   NOISE OVERLAY
+=========================== */
+body::before {
+  content:'';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.vx-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(14,14,14,0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vx-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vx-logo span {
+  background: var(--main-color);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.vx-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.vx-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: .5px;
+  transition: color var(--transition);
+}
+
+.vx-nav a:hover { color: var(--white); }
+
+.vx-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.vx-header-icons button {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.vx-header-icons button:hover { color: var(--white); }
+
+.vx-cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================
+   BREADCRUMB
+=========================== */
+.vx-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 40px 0;
+}
+
+.vx-breadcrumb a,
+.vx-breadcrumb span,
+.vx-breadcrumb p {
+  font-size: 12px;
+  color: #555;
+  letter-spacing: .4px;
+}
+
+.vx-breadcrumb a:hover { color: var(--text); }
+.vx-breadcrumb p { color: var(--text); }
+
+/* ===========================
+   MAIN PAGE
+=========================== */
+.vx-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 40px 60px;
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+.vx-product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* ===========================
+   LEFT – GALLERY
+=========================== */
+.vx-gallery {
+  position: sticky;
+  top: 90px;
+  height: fit-content;
+}
+
+.vx-main-img-wrap {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: zoom-in;
+}
+
+.vx-sale-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.vx-main-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 24px;
+  transition: transform 0.4s ease;
+}
+
+.vx-main-img-wrap:hover img {
+  transform: scale(1.06);
+}
+
+/* Zoom Lens */
+.vx-zoom-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.vx-slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(14,14,14,0.8);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.vx-slide-btn:hover { background: var(--main-color); transform: translateY(-50%) scale(1.1); }
+.vx-prev { left: 12px; }
+.vx-next { right: 12px; }
+
+/* Thumbnails */
+.vx-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.vx-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  background: var(--panel);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.vx-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+}
+
+.vx-thumb:hover { transform: translateY(-2px); }
+.vx-thumb.active { border-color: var(--main-color); }
+
+/* Feature Boxes */
+.vx-features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.vx-feat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  transition: border-color var(--transition);
+}
+
+.vx-feat:hover { border-color: #444; }
+
+.vx-feat i {
+  font-size: 18px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.vx-feat h5 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.vx-feat p {
+  font-size: 11px;
+  color: #555;
+  margin: 0;
+}
+
+/* ===========================
+   RIGHT – PRODUCT INFO
+=========================== */
+.vx-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.vx-category-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.vx-product-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+/* Rating */
+.vx-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.vx-stars { display: flex; gap: 2px; }
+.vx-stars i { font-size: 13px; color: var(--gold); }
+
+.vx-review-count {
+  font-size: 13px;
+  color: #777;
+}
+
+.vx-add-review {
+  font-size: 12px;
+  color: var(--gold);
+  border-bottom: 1px dashed var(--gold);
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.vx-add-review:hover { opacity: .7; }
+
+/* Price */
+.vx-price-block {
+  margin-bottom: 20px;
+}
+
+.vx-price-main {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--white);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.vx-price-main small {
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  color: #666;
+  letter-spacing: .5px;
+}
+
+.vx-price-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.vx-old-price {
+  text-decoration: line-through;
+  color: #555;
+  font-size: 14px;
+}
+
+.vx-off-badge {
+  background: rgba(232,40,30,0.15);
+  border: 1px solid rgba(232,40,30,0.3);
+  color: var(--main-color);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 30px;
+  letter-spacing: .5px;
+}
+
+.vx-tax-note {
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Info Table */
+.vx-info-table {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.vx-info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.vx-info-row:last-child { border-bottom: none; }
+
+.vx-info-row span {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #666;
+  background: rgba(255,255,255,0.02);
+  border-right: 1px solid var(--border);
+}
+
+.vx-info-row strong {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Stock */
+.vx-stock-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: rgba(41,217,122,0.05);
+  border: 1px solid rgba(41,217,122,0.15);
+  border-radius: 10px;
+}
+
+.vx-stock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 3px rgba(41,217,122,.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(41,217,122,.2); }
+  50%       { box-shadow: 0 0 0 6px rgba(41,217,122,.05); }
+}
+
+.vx-stock-row p {
+  font-size: 13px;
+  color: var(--green);
+  font-weight: 500;
+}
+
+.vx-stock-row .vx-moq {
+  margin-left: auto;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Color options */
+.vx-options-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.vx-color-swatches {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.vx-swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.vx-swatch:hover { transform: scale(1.15); }
+.vx-swatch.active { border-color: var(--white); }
+.vx-swatch.active::after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Size selector */
+.vx-size-options {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.vx-size-btn {
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.vx-size-btn:hover { border-color: #666; color: var(--white); }
+.vx-size-btn.active { border-color: var(--white); background: var(--white); color: var(--secondary-color); }
+
+/* Cart row */
+.vx-cart-row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.vx-qty-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.vx-qty-box button {
+  width: 46px;
+  height: 52px;
+  border: none;
+  background: none;
+  color: var(--white);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-qty-box button:hover { background: rgba(255,255,255,.06); }
+
+.vx-qty-box input {
+  width: 52px;
+  height: 52px;
+  background: none;
+  border: none;
+  text-align: center;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Remove number arrows */
+.vx-qty-box input[type=number]::-webkit-outer-spin-button,
+.vx-qty-box input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.vx-cart-btn {
+  flex: 1;
+  height: 52px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #e8281e 0%, #ff6b35 100%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.vx-cart-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.15);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.vx-cart-btn:hover::before { transform: translateX(0); }
+.vx-cart-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(232,40,30,.4); }
+.vx-cart-btn:active { transform: translateY(0); }
+
+.vx-buy-btn {
+  flex: 1;
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition);
+}
+
+.vx-buy-btn:hover {
+  background: rgba(255,255,255,.08);
+  border-color: #666;
+  transform: translateY(-2px);
+}
+
+/* Action row */
+.vx-actions {
+  display: flex;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.vx-action-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
+  transition: color var(--transition);
+}
+
+.vx-action-btn:hover { color: var(--white); }
+.vx-action-btn.wishlisted { color: var(--main-color); }
+.vx-action-btn.wishlisted i::before { content: '\f415'; } /* bi-heart-fill */
+
+/* Meta */
+.vx-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+  color: #555;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.vx-meta a {
+  color: #888;
+  border-bottom: 1px dashed #444;
+  transition: color var(--transition);
+}
+
+.vx-meta a:hover { color: var(--white); }
+
+/* ===========================
+   TOAST
+=========================== */
+.vx-toast-wrap {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  pointer-events: none;
+}
+
+.vx-toast {
+  background: var(--mid);
+  border: 1px solid var(--border);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: toastIn .35s ease forwards;
+  pointer-events: all;
+}
+
+.vx-toast i { color: var(--green); font-size: 16px; }
+.vx-toast.error i { color: var(--main-color); }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(20px) scale(.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes toastOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 0; transform: translateY(20px) scale(.95); }
+}
+
+/* ===========================
+   TABS
+=========================== */
+.vx-tabs-section {
+  margin-top: 40px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.vx-tab-nav {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.vx-tab-nav::-webkit-scrollbar { display: none; }
+
+.vx-tab-btn {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 18px 28px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  bottom: -1px;
+}
+
+.vx-tab-btn:hover { color: var(--text); }
+.vx-tab-btn.active { color: var(--white); border-bottom-color: var(--main-color); }
+
+.vx-tab-pane {
+  display: none;
+  padding: 32px;
+  animation: fadeUp .3s ease;
+}
+
+.vx-tab-pane.active { display: block; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Description */
+.vx-desc-intro {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 680px;
+}
+
+.vx-desc-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+
+.vx-desc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.vx-desc-item i {
+  font-size: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vx-desc-item p {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Reviews */
+.vx-reviews-summary {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.vx-rating-big {
+  text-align: center;
+}
+
+.vx-rating-big span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--white);
+  display: block;
+}
+
+.vx-rating-big .vx-stars { justify-content: center; margin: 6px 0 4px; }
+.vx-rating-big p { font-size: 12px; color: #555; }
+
+.vx-rating-bars { flex: 1; min-width: 200px; }
+
+.vx-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.vx-bar-row span { font-size: 12px; color: #666; width: 30px; text-align: right; flex-shrink: 0; }
+.vx-bar-row .vx-bar-track { flex: 1; height: 6px; background: var(--border); border-radius: 50px; overflow: hidden; }
+.vx-bar-row .vx-bar-fill { height: 100%; background: var(--gold); border-radius: 50px; transition: width 1s ease; }
+.vx-bar-row .vx-bar-count { font-size: 11px; color: #555; width: 24px; flex-shrink: 0; }
+
+.vx-review-cards { display: flex; flex-direction: column; gap: 16px; }
+
+.vx-review-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.vx-review-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.vx-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8281e, #c9972c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.vx-reviewer-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.vx-review-date {
+  font-size: 11px;
+  color: #555;
+}
+
+.vx-review-text {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.vx-review-tag {
+  display: inline-block;
+  margin-top: 10px;
+  background: rgba(41,217,122,.08);
+  border: 1px solid rgba(41,217,122,.15);
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 30px;
+  letter-spacing: .5px;
+}
+
+/* Add review form */
+.vx-add-review-form {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.vx-add-review-form h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.vx-form-group { margin-bottom: 14px; }
+
+.vx-form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.vx-form-group input,
+.vx-form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--white);
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color var(--transition);
+  resize: none;
+}
+
+.vx-form-group input:focus,
+.vx-form-group textarea:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.vx-star-picker {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.vx-star-pick {
+  font-size: 24px;
+  color: var(--border);
+  cursor: pointer;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.vx-star-pick:hover,
+.vx-star-pick.active { color: var(--gold); transform: scale(1.2); }
+
+.vx-submit-review {
+  background: linear-gradient(135deg, #e8281e, #ff6b35);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.vx-submit-review:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,40,30,.4);
+}
+
+/* Shipping */
+.vx-shipping-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.vx-ship-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.vx-ship-card i {
+  font-size: 28px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.vx-ship-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.vx-ship-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ===========================
+   LIGHTBOX
+=========================== */
+.vx-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.95);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-lightbox.open { display: flex; }
+
+.vx-lightbox img {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  animation: fadeUp .3s ease;
+}
+
+.vx-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 32px;
+  cursor: pointer;
+  opacity: .7;
+  transition: opacity var(--transition);
+}
+
+.vx-lightbox-close:hover { opacity: 1; }
+
+/* ===========================
+   SHARE MODAL
+=========================== */
+.vx-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  z-index: 9000;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.vx-modal-overlay.open { display: flex; }
+
+.vx-modal {
+  background: var(--mid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 28px;
+  width: 100%;
+  max-width: 480px;
+  animation: slideUp .35s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.vx-modal h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.vx-share-options {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.vx-share-opt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.vx-share-opt:hover { background: rgba(255,255,255,.08); border-color: #555; }
+.vx-share-opt i { font-size: 22px; }
+.vx-share-opt span { font-size: 11px; color: #666; }
+
+.vx-copy-link {
+  display: flex;
+  gap: 8px;
+}
+
+.vx-copy-link input {
+  flex: 1;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #666;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.vx-copy-link button {
+  background: var(--main-color);
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: .5px;
+  transition: opacity var(--transition);
+}
+
+.vx-copy-link button:hover { opacity: .85; }
+
+.vx-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.vx-modal-close:hover { color: var(--white); }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 991px) {
+  .vx-product-grid { grid-template-columns: 1fr; }
+  .vx-gallery { position: static; }
+  .vx-product-title { font-size: 40px; }
+  .vx-price-main { font-size: 42px; }
+  .vx-nav { display: none; }
+}
+
+@media (max-width: 640px) {
+  .vx-page { padding: 20px 16px 60px; }
+  .vx-breadcrumb { padding: 16px 16px 0; }
+  .vx-header { padding: 0 16px; }
+  .vx-product-title { font-size: 32px; }
+  .vx-cart-row { flex-wrap: wrap; }
+  .vx-cart-btn, .vx-buy-btn { flex: 1; min-width: 120px; }
+  .vx-desc-grid { grid-template-columns: 1fr; }
+  .vx-shipping-grid { grid-template-columns: 1fr; }
+  .vx-share-options { grid-template-columns: repeat(4,1fr); }
+  .vx-features { grid-template-columns: 1fr; }
+  .vx-tab-pane { padding: 20px 16px; }
+}
+
 </style>
+</head>
+<body>
 
-<!-- BOTTOM NAVBAR -->
-<section class="vxm-bottom-navbar">
-  <div class="container-fluid">
-    <div class="vxm-nav-flex">
 
-      <a href="#" class="vxm-nav-link active">
-        <i class="bi bi-house-door-fill"></i>
-        <span>Home</span>
-      </a>
 
-      <a href="#" class="vxm-nav-link">
-        <i class="bi bi-info-circle-fill"></i>
-        <span>About</span>
-      </a>
+<!-- BREADCRUMB -->
+<div class="vx-breadcrumb">
+  <a href="#">Home</a><span>/</span>
+  <a href="#">Cricket Accessories</a><span>/</span>
+  <p>Plastic Cricket Stumps Set</p>
+</div>
 
-      <a href="#" class="vxm-nav-link">
-        <i class="bi bi-bag-fill"></i>
-        <span>Shop</span>
-      </a>
+<!-- ===========================
+     MAIN PAGE
+=========================== -->
+<div class="vx-page">
 
-      <a href="#" class="vxm-nav-link">
-        <i class="bi bi-envelope-fill"></i>
-        <span>Contact</span>
-      </a>
+  <div class="vx-product-grid">
 
-      <a href="tel:+911234567890" class="vxm-nav-link">
-        <i class="bi bi-telephone-fill"></i>
-        <span>Call</span>
-      </a>
+    <!-- ===========================
+         LEFT – GALLERY
+    =========================== -->
+    <div class="vx-gallery">
+
+      <div class="vx-main-img-wrap" onclick="openLightbox()">
+        <span class="vx-sale-tag">−12% OFF</span>
+        <button class="vx-slide-btn vx-prev" onclick="event.stopPropagation(); slideImage(-1)">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <img id="mainImage" src="https://placehold.co/600x600/181818/c8c8c8?text=Cricket+Stumps+1" alt="Cricket Stumps">
+        <button class="vx-slide-btn vx-next" onclick="event.stopPropagation(); slideImage(1)">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="vx-thumbs" id="thumbRow">
+        <div class="vx-thumb active" onclick="selectImage(0, this)">
+          <img src="https://placehold.co/200x200/181818/c8c8c8?text=View+1" alt="">
+        </div>
+        <div class="vx-thumb" onclick="selectImage(1, this)">
+          <img src="https://placehold.co/200x200/181818/e8281e?text=View+2" alt="">
+        </div>
+        <div class="vx-thumb" onclick="selectImage(2, this)">
+          <img src="https://placehold.co/200x200/181818/c9972c?text=View+3" alt="">
+        </div>
+        <div class="vx-thumb" onclick="selectImage(3, this)">
+          <img src="https://placehold.co/200x200/181818/29d97a?text=View+4" alt="">
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="vx-features">
+        <div class="vx-feat">
+          <i class="bi bi-truck"></i>
+          <div>
+            <h5>Free Delivery</h5>
+            <p>Orders above ₹999</p>
+          </div>
+        </div>
+        <div class="vx-feat">
+          <i class="bi bi-arrow-repeat"></i>
+          <div>
+            <h5>7‑Day Returns</h5>
+            <p>Hassle-free policy</p>
+          </div>
+        </div>
+        <div class="vx-feat">
+          <i class="bi bi-shield-check"></i>
+          <div>
+            <h5>Secure Pay</h5>
+            <p>100% safe checkout</p>
+          </div>
+        </div>
+      </div>
 
     </div>
+
+    <!-- ===========================
+         RIGHT – INFO
+    =========================== -->
+    <div class="vx-product-info">
+
+      <div class="vx-category-tag">Cricket Accessories</div>
+
+      <h1 class="vx-product-title">Plastic Cricket Stumps Set</h1>
+
+      <!-- Rating -->
+      <div class="vx-rating-row">
+        <div class="vx-stars">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <span class="vx-review-count">4.6 (128 Reviews)</span>
+        <span class="vx-add-review" onclick="openTab('reviews')">Write a Review</span>
+      </div>
+
+      <!-- Price -->
+      <div class="vx-price-block">
+        <div class="vx-price-main">
+          ₹<span id="displayPrice">140.00</span>
+          <small>/ Piece</small>
+        </div>
+        <div class="vx-price-sub">
+          <span class="vx-old-price">₹160.00</span>
+          <span class="vx-off-badge">12% OFF</span>
+        </div>
+        <p class="vx-tax-note">Inclusive of all taxes</p>
+      </div>
+
+      <!-- Info Table -->
+      <div class="vx-info-table" style="margin-bottom:20px;">
+        <div class="vx-info-row"><span>Material</span><strong>PVC</strong></div>
+        <div class="vx-info-row"><span>Type</span><strong>Cricket Stumps</strong></div>
+        <div class="vx-info-row"><span>Weight</span><strong>650 g</strong></div>
+        <div class="vx-info-row"><span>Size</span><strong>Standard</strong></div>
+        <div class="vx-info-row"><span>Origin</span><strong>Made in India</strong></div>
+      </div>
+
+      <!-- Stock -->
+      <div class="vx-stock-row">
+        <div class="vx-stock-dot"></div>
+        <p>In Stock — Ready to Ship</p>
+        <span class="vx-moq">Min. order: <strong>40 Sets</strong></span>
+      </div>
+
+      <!-- Color -->
+      <div style="margin-bottom:20px;">
+        <p class="vx-options-label">Color — <span id="selectedColor" style="color:var(--text);text-transform:capitalize;">Red</span></p>
+        <div class="vx-color-swatches">
+          <div class="vx-swatch active" style="background:#e8281e;" data-color="Red" onclick="selectColor(this)"></div>
+          <div class="vx-swatch" style="background:#1e90e8;" data-color="Blue" onclick="selectColor(this)"></div>
+          <div class="vx-swatch" style="background:#29d97a;" data-color="Green" onclick="selectColor(this)"></div>
+          <div class="vx-swatch" style="background:#f5c842;" data-color="Yellow" onclick="selectColor(this)"></div>
+        </div>
+      </div>
+
+      <!-- Size -->
+      <div style="margin-bottom:24px;">
+        <p class="vx-options-label">Size</p>
+        <div class="vx-size-options">
+          <button class="vx-size-btn" onclick="selectSize(this)">Junior</button>
+          <button class="vx-size-btn active" onclick="selectSize(this)">Standard</button>
+          <button class="vx-size-btn" onclick="selectSize(this)">Senior</button>
+        </div>
+      </div>
+
+      <!-- Cart -->
+      <div class="vx-cart-row">
+        <div class="vx-qty-box">
+          <button onclick="changeQty(-1)"><i class="bi bi-dash"></i></button>
+          <input type="number" id="qtyInput" value="40" min="40">
+          <button onclick="changeQty(1)"><i class="bi bi-plus"></i></button>
+        </div>
+        <button class="vx-cart-btn" onclick="addToCart()">
+          <i class="bi bi-bag-plus"></i> Add to Cart
+        </button>
+        <button class="vx-buy-btn" onclick="buyNow()">
+          <i class="bi bi-lightning-charge"></i> Buy Now
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="vx-actions">
+        <button class="vx-action-btn" id="wishlistBtn" onclick="toggleWishlist()">
+          <i class="bi bi-heart"></i> Add to Wishlist
+        </button>
+        <button class="vx-action-btn" onclick="openShareModal()">
+          <i class="bi bi-share"></i> Share
+        </button>
+        <button class="vx-action-btn" onclick="copyProductLink()">
+          <i class="bi bi-link-45deg"></i> Copy Link
+        </button>
+      </div>
+
+      <!-- Meta -->
+      <div class="vx-meta">
+        <span>Category: <a href="#">Cricket Accessories</a></span>
+        <span>Brand: <a href="#">VS Sports</a></span>
+        <span>SKU: <a href="#">VSS-STMP-PVC-001</a></span>
+      </div>
+
+    </div>
+
   </div>
-</section>
+
+  <!-- ===========================
+       TABS
+  =========================== -->
+  <div class="vx-tabs-section">
+
+    <div class="vx-tab-nav">
+      <button class="vx-tab-btn active" onclick="openTab('desc', this)">Description</button>
+      <button class="vx-tab-btn" onclick="openTab('addinfo', this)">Additional Info</button>
+      <button class="vx-tab-btn" onclick="openTab('reviews', this)">Reviews (128)</button>
+      <button class="vx-tab-btn" onclick="openTab('shipping', this)">Shipping & Returns</button>
+    </div>
+
+    <!-- Description -->
+    <div class="vx-tab-pane active" id="desc">
+      <p class="vx-desc-intro">
+        VS Sports India Plastic Cricket Stumps Set — engineered for both casual play and professional training. Built from premium-grade PVC, these stumps offer outstanding impact resistance, UV protection, and a crisp sound on bail-displacement that mimics real wickets.
+      </p>
+      <div class="vx-desc-grid">
+        <div class="vx-desc-item"><i class="bi bi-check-circle-fill"></i><p>Premium PVC construction — durable, impact-resistant, and weather-proof</p></div>
+        <div class="vx-desc-item"><i class="bi bi-check-circle-fill"></i><p>Lightweight design — easy to transport to any ground or backyard</p></div>
+        <div class="vx-desc-item"><i class="bi bi-check-circle-fill"></i><p>Full set included — 3 stumps, 2 bails, and a spike base</p></div>
+        <div class="vx-desc-item"><i class="bi bi-check-circle-fill"></i><p>Ideal for indoor, outdoor, box cricket, and coaching camps</p></div>
+        <div class="vx-desc-item"><i class="bi bi-check-circle-fill"></i><p>UV-stabilised pigments — colour won't fade in harsh sunlight</p></div>
+        <div class="vx-desc-item"><i class="bi bi-check-circle-fill"></i><p>Certified standard dimensions — MCC regulation size available</p></div>
+      </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="vx-tab-pane" id="addinfo">
+      <div class="vx-info-table" style="max-width:560px;">
+        <div class="vx-info-row"><span>Material</span><strong>Food-grade PVC</strong></div>
+        <div class="vx-info-row"><span>Stump Height</span><strong>71.1 cm (28 inches)</strong></div>
+        <div class="vx-info-row"><span>Width (total)</span><strong>22.9 cm (9 inches)</strong></div>
+        <div class="vx-info-row"><span>Weight</span><strong>650 g per set</strong></div>
+        <div class="vx-info-row"><span>Colors Available</span><strong>Red, Blue, Green, Yellow</strong></div>
+        <div class="vx-info-row"><span>Package Contents</span><strong>3 Stumps + 2 Bails + Base</strong></div>
+        <div class="vx-info-row"><span>Country of Origin</span><strong>India</strong></div>
+        <div class="vx-info-row"><span>Warranty</span><strong>6 Months Manufacturing</strong></div>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="vx-tab-pane" id="reviews">
+
+      <div class="vx-reviews-summary">
+
+        <div class="vx-rating-big">
+          <span>4.6</span>
+          <div class="vx-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <p>128 Reviews</p>
+        </div>
+
+        <div class="vx-rating-bars">
+          <div class="vx-bar-row"><span>5 ★</span><div class="vx-bar-track"><div class="vx-bar-fill" style="width:72%"></div></div><span class="vx-bar-count">92</span></div>
+          <div class="vx-bar-row"><span>4 ★</span><div class="vx-bar-track"><div class="vx-bar-fill" style="width:18%"></div></div><span class="vx-bar-count">23</span></div>
+          <div class="vx-bar-row"><span>3 ★</span><div class="vx-bar-track"><div class="vx-bar-fill" style="width:7%"></div></div><span class="vx-bar-count">9</span></div>
+          <div class="vx-bar-row"><span>2 ★</span><div class="vx-bar-track"><div class="vx-bar-fill" style="width:2%"></div></div><span class="vx-bar-count">3</span></div>
+          <div class="vx-bar-row"><span>1 ★</span><div class="vx-bar-track"><div class="vx-bar-fill" style="width:1%"></div></div><span class="vx-bar-count">1</span></div>
+        </div>
+
+      </div>
+
+      <div class="vx-review-cards" id="reviewList">
+
+        <div class="vx-review-card">
+          <div class="vx-review-top">
+            <div class="vx-avatar">R</div>
+            <div>
+              <div class="vx-reviewer-name">Rahul Sharma</div>
+              <div class="vx-stars" style="font-size:11px; margin:2px 0;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="vx-review-date">April 2025</div>
+            </div>
+          </div>
+          <p class="vx-review-text">Used these for our local coaching academy. Excellent build quality — durable and the bails sit perfectly. Ordered 100 sets and all arrived in pristine condition.</p>
+          <span class="vx-review-tag">✓ Verified Purchase</span>
+        </div>
+
+        <div class="vx-review-card">
+          <div class="vx-review-top">
+            <div class="vx-avatar" style="background:linear-gradient(135deg,#1e90e8,#29d97a);">P</div>
+            <div>
+              <div class="vx-reviewer-name">Priya Mehta</div>
+              <div class="vx-stars" style="font-size:11px; margin:2px 0;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="vx-review-date">March 2025</div>
+            </div>
+          </div>
+          <p class="vx-review-text">Really solid product. My kids use them in the garden daily. The PVC hasn't faded despite months of sunlight. Shipping was fast too.</p>
+          <span class="vx-review-tag">✓ Verified Purchase</span>
+        </div>
+
+        <div class="vx-review-card">
+          <div class="vx-review-top">
+            <div class="vx-avatar" style="background:linear-gradient(135deg,#c9972c,#e8281e);">A</div>
+            <div>
+              <div class="vx-reviewer-name">Arjun Patel</div>
+              <div class="vx-stars" style="font-size:11px; margin:2px 0;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <div class="vx-review-date">February 2025</div>
+            </div>
+          </div>
+          <p class="vx-review-text">Great value for bulk orders. Used them in a school tournament — looked professional and held up to heavy use. Would reorder for next season.</p>
+          <span class="vx-review-tag">✓ Verified Purchase</span>
+        </div>
+
+      </div>
+
+      <!-- Add Review Form -->
+      <div class="vx-add-review-form">
+        <h4>Share Your Experience</h4>
+        <p class="vx-options-label" style="margin-bottom:10px;">Your Rating</p>
+        <div class="vx-star-picker" id="starPicker">
+          <i class="bi bi-star-fill vx-star-pick" data-val="1" onclick="setReviewStar(1)"></i>
+          <i class="bi bi-star-fill vx-star-pick" data-val="2" onclick="setReviewStar(2)"></i>
+          <i class="bi bi-star-fill vx-star-pick" data-val="3" onclick="setReviewStar(3)"></i>
+          <i class="bi bi-star-fill vx-star-pick" data-val="4" onclick="setReviewStar(4)"></i>
+          <i class="bi bi-star-fill vx-star-pick" data-val="5" onclick="setReviewStar(5)"></i>
+        </div>
+        <div class="vx-form-group">
+          <label>Name</label>
+          <input type="text" id="reviewName" placeholder="Your name">
+        </div>
+        <div class="vx-form-group">
+          <label>Review</label>
+          <textarea id="reviewText" rows="4" placeholder="Tell others about your experience..."></textarea>
+        </div>
+        <button class="vx-submit-review" onclick="submitReview()">Submit Review</button>
+      </div>
+
+    </div>
+
+    <!-- Shipping -->
+    <div class="vx-tab-pane" id="shipping">
+      <div class="vx-shipping-grid">
+        <div class="vx-ship-card">
+          <i class="bi bi-truck"></i>
+          <h4>Free Shipping</h4>
+          <p>Free delivery on all orders above ₹999. Standard delivery within 5–7 business days across India.</p>
+        </div>
+        <div class="vx-ship-card">
+          <i class="bi bi-lightning-charge"></i>
+          <h4>Express Delivery</h4>
+          <p>Select express at checkout for 2–3 business day delivery. Available in select metros for a nominal fee.</p>
+        </div>
+        <div class="vx-ship-card">
+          <i class="bi bi-arrow-repeat"></i>
+          <h4>7-Day Returns</h4>
+          <p>Not happy? Return within 7 days of delivery for a full refund. Items must be unused and in original packaging.</p>
+        </div>
+        <div class="vx-ship-card">
+          <i class="bi bi-shield-check"></i>
+          <h4>Buyer Protection</h4>
+          <p>Every order is covered by VS Sports Buyer Protection. Damaged on arrival? We'll replace it, no questions asked.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===========================
+     LIGHTBOX
+=========================== -->
+<div class="vx-lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="vx-lightbox-close" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ===========================
+     SHARE MODAL
+=========================== -->
+<div class="vx-modal-overlay" id="shareModal" onclick="closeShareModal(event)">
+  <div class="vx-modal" style="position:relative;">
+    <button class="vx-modal-close" onclick="closeShareModal()"><i class="bi bi-x"></i></button>
+    <h3>Share This Product</h3>
+    <div class="vx-share-options">
+      <div class="vx-share-opt" onclick="shareOn('whatsapp')">
+        <i class="bi bi-whatsapp" style="color:#25d366;"></i>
+        <span>WhatsApp</span>
+      </div>
+      <div class="vx-share-opt" onclick="shareOn('twitter')">
+        <i class="bi bi-twitter-x" style="color:#fff;"></i>
+        <span>X (Twitter)</span>
+      </div>
+      <div class="vx-share-opt" onclick="shareOn('facebook')">
+        <i class="bi bi-facebook" style="color:#1877f2;"></i>
+        <span>Facebook</span>
+      </div>
+      <div class="vx-share-opt" onclick="shareOn('email')">
+        <i class="bi bi-envelope" style="color:var(--gold);"></i>
+        <span>Email</span>
+      </div>
+    </div>
+    <div class="vx-copy-link">
+      <input type="text" id="shareLinkInput" value="https://vexonsports.in/product/cricket-stumps-pvc-001" readonly>
+      <button onclick="copyShareLink()">Copy</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===========================
+     TOAST CONTAINER
+=========================== -->
+<div class="vx-toast-wrap" id="toastWrap"></div>
+
+
+<!-- ===========================
+     JAVASCRIPT
+=========================== -->
+<script>
+
+/* ---- STATE ---- */
+const images = [
+  'https://placehold.co/600x600/181818/c8c8c8?text=Cricket+Stumps+1',
+  'https://placehold.co/600x600/181818/e8281e?text=Cricket+Stumps+2',
+  'https://placehold.co/600x600/181818/c9972c?text=Cricket+Stumps+3',
+  'https://placehold.co/600x600/181818/29d97a?text=Cricket+Stumps+4',
+];
+
+let currentImg    = 0;
+let cartCount     = 0;
+let wishlisted    = false;
+let reviewRating  = 0;
+
+/* ---- IMAGE GALLERY ---- */
+function selectImage(idx, el) {
+  currentImg = idx;
+  document.getElementById('mainImage').src = images[idx];
+  document.querySelectorAll('.vx-thumb').forEach((t,i) => t.classList.toggle('active', i === idx));
+}
+
+function slideImage(dir) {
+  currentImg = (currentImg + dir + images.length) % images.length;
+  const thumbs = document.querySelectorAll('.vx-thumb');
+  selectImage(currentImg, thumbs[currentImg]);
+}
+
+/* ---- LIGHTBOX ---- */
+function openLightbox() {
+  document.getElementById('lightboxImg').src = images[currentImg];
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+/* ---- QTY ---- */
+function changeQty(delta) {
+  const input = document.getElementById('qtyInput');
+  const newVal = Math.max(40, parseInt(input.value || 40) + delta);
+  input.value = newVal;
+}
+
+/* ---- COLOR ---- */
+function selectColor(el) {
+  document.querySelectorAll('.vx-swatch').forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('selectedColor').textContent = el.dataset.color;
+  showToast('Color changed to ' + el.dataset.color, 'bi-palette');
+}
+
+/* ---- SIZE ---- */
+function selectSize(el) {
+  document.querySelectorAll('.vx-size-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  showToast('Size selected: ' + el.textContent, 'bi-rulers');
+}
+
+/* ---- CART ---- */
+function addToCart() {
+  cartCount++;
+  document.getElementById('cartCountBadge').textContent = cartCount;
+  showToast('Added to cart!', 'bi-bag-check-fill');
+
+  const btn = document.querySelector('.vx-cart-btn');
+  btn.style.transform = 'scale(.95)';
+  setTimeout(() => btn.style.transform = '', 150);
+}
+
+function openCartToast() {
+  showToast(`${cartCount} item(s) in your cart`, 'bi-bag');
+}
+
+function buyNow() {
+  showToast('Redirecting to checkout...', 'bi-lightning-charge-fill');
+}
+
+/* ---- WISHLIST ---- */
+function toggleWishlist() {
+  wishlisted = !wishlisted;
+  const btn = document.getElementById('wishlistBtn');
+  if (wishlisted) {
+    btn.classList.add('wishlisted');
+    btn.innerHTML = '<i class="bi bi-heart-fill"></i> Wishlisted';
+    showToast('Added to wishlist!', 'bi-heart-fill');
+  } else {
+    btn.classList.remove('wishlisted');
+    btn.innerHTML = '<i class="bi bi-heart"></i> Add to Wishlist';
+    showToast('Removed from wishlist', 'bi-heart');
+  }
+}
+
+/* ---- COPY LINK ---- */
+function copyProductLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    showToast('Product link copied!', 'bi-link-45deg');
+  }).catch(() => {
+    showToast('Link copied!', 'bi-link-45deg');
+  });
+}
+
+/* ---- TABS ---- */
+function openTab(id, btn) {
+  document.querySelectorAll('.vx-tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.vx-tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (btn) btn.classList.add('active');
+  else {
+    // called programmatically — activate correct button
+    document.querySelectorAll('.vx-tab-btn').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes(id)) b.classList.add('active');
+    });
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/* ---- REVIEW STARS ---- */
+function setReviewStar(val) {
+  reviewRating = val;
+  document.querySelectorAll('.vx-star-pick').forEach((s, i) => {
+    s.classList.toggle('active', i < val);
+  });
+}
+
+/* ---- SUBMIT REVIEW ---- */
+function submitReview() {
+  const name = document.getElementById('reviewName').value.trim();
+  const text = document.getElementById('reviewText').value.trim();
+
+  if (!name) { showToast('Please enter your name', 'bi-exclamation-circle', true); return; }
+  if (!text)  { showToast('Please write a review', 'bi-exclamation-circle', true); return; }
+  if (!reviewRating) { showToast('Please select a star rating', 'bi-exclamation-circle', true); return; }
+
+  const starsHTML = Array.from({length:5}, (_,i) =>
+    `<i class="bi bi-star${i < reviewRating ? '-fill' : ''}" style="font-size:11px;"></i>`
+  ).join('');
+
+  const card = document.createElement('div');
+  card.className = 'vx-review-card';
+  card.innerHTML = `
+    <div class="vx-review-top">
+      <div class="vx-avatar" style="background:linear-gradient(135deg,#7b61ff,#1e90e8);">${name[0].toUpperCase()}</div>
+      <div>
+        <div class="vx-reviewer-name">${escapeHTML(name)}</div>
+        <div class="vx-stars" style="font-size:11px; margin:2px 0;">${starsHTML}</div>
+        <div class="vx-review-date">Just now</div>
+      </div>
+    </div>
+    <p class="vx-review-text">${escapeHTML(text)}</p>
+    <span class="vx-review-tag">✓ Verified Purchase</span>
+  `;
+  card.style.animation = 'fadeUp .4s ease';
+  document.getElementById('reviewList').prepend(card);
+
+  document.getElementById('reviewName').value = '';
+  document.getElementById('reviewText').value = '';
+  reviewRating = 0;
+  setReviewStar(0);
+
+  showToast('Thank you for your review!', 'bi-check-circle-fill');
+}
+
+function escapeHTML(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ---- SHARE MODAL ---- */
+function openShareModal() {
+  document.getElementById('shareModal').classList.add('open');
+}
+
+function closeShareModal(e) {
+  if (!e || e.target === document.getElementById('shareModal')) {
+    document.getElementById('shareModal').classList.remove('open');
+  }
+}
+
+function shareOn(platform) {
+  const url = encodeURIComponent('https://vexonsports.in/product/cricket-stumps-pvc-001');
+  const text = encodeURIComponent('Check out this Plastic Cricket Stumps Set from Vexon Sports!');
+  const links = {
+    whatsapp: `https://wa.me/?text=${text}%20${url}`,
+    twitter:  `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    email:    `mailto:?subject=Check this out&body=${text}%20${url}`,
+  };
+  window.open(links[platform], '_blank');
+  showToast('Opening ' + platform + '...', 'bi-share');
+}
+
+function copyShareLink() {
+  const val = document.getElementById('shareLinkInput').value;
+  navigator.clipboard.writeText(val).catch(() => {});
+  showToast('Link copied to clipboard!', 'bi-clipboard-check');
+}
+
+/* ---- TOAST ---- */
+function showToast(msg, icon = 'bi-check-circle-fill', isError = false) {
+  const wrap = document.getElementById('toastWrap');
+  const toast = document.createElement('div');
+  toast.className = 'vx-toast' + (isError ? ' error' : '');
+  toast.innerHTML = `<i class="bi ${icon}"></i>${msg}`;
+  wrap.appendChild(toast);
+  setTimeout(() => {
+    toast.style.animation = 'toastOut .35s ease forwards';
+    setTimeout(() => toast.remove(), 350);
+  }, 2800);
+}
+
+/* ---- KEYBOARD ESC ---- */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeShareModal({ target: document.getElementById('shareModal') });
+  }
+});
+
+/* ---- KEYBOARD SLIDE ---- */
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft')  slideImage(-1);
+  if (e.key === 'ArrowRight') slideImage(1);
+});
+
+/* ---- SWIPE SUPPORT ---- */
+let touchStartX = 0;
+document.querySelector('.vx-main-img-wrap').addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+document.querySelector('.vx-main-img-wrap').addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 40) slideImage(diff > 0 ? 1 : -1);
+});
+
+/* ---- QTY VALIDATION ---- */
+document.getElementById('qtyInput').addEventListener('blur', function() {
+  if (parseInt(this.value) < 40 || isNaN(parseInt(this.value))) {
+    this.value = 40;
+    showToast('Minimum order quantity is 40', 'bi-info-circle', true);
+  }
+});
+
+</script>
+
+</body>
+</html>
